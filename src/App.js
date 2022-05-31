@@ -6,12 +6,7 @@ import Search from './components/Search';
 import Header from './components/Header';
 
 function App() {
-  const [notes, setNotes] = useState([{
-    id: nanoid(),
-    text: "",
-    date: ""
-  }
-]);
+  const [notes, setNotes] = useState([]);
 
 const [searchText, setSearchText] = useState('');
 const [darkMode, setDarkMode] = useState(false);
@@ -32,12 +27,14 @@ useEffect(() => {
 
 const addNote = (text) => {
    const date = new Date();
+   const time = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
    const newNote = {
      id: nanoid(),
      text: text,
-     date: date.toLocaleDateString()
+     date: date.toLocaleDateString(),
+     time: time
    }
-   const newNotes = [...notes, newNote];
+   const newNotes = [newNote, ...notes];
    setNotes(newNotes);
 }
 

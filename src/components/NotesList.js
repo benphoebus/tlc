@@ -12,6 +12,7 @@ function NotesList({ notes, handleAddNote, handleDeleteNote }) {
                     id={note.id}
                     text={note.text}
                     date={note.date}
+                    time={note.time}
                     handleDeleteNote={handleDeleteNote}
                 /> 
             ))}

@@ -11,6 +11,7 @@
     }
 
     const handleSaveClick = () => {
+        console.log('clicked');
         if(noteText.trim().length > 0){
             handleAddNote(noteText)
             setNoteText('')
