@@ -19,7 +19,7 @@ func main() {
 	configs.ConnectDB()
 
 	// routes 
-	routes.UserRoutes(router)
+	routes.UserRoute(router)
 	
 	// http.ListenAndServe function to run the application on port 6000
 	log.Fatal(http.ListenAndServe(":6000", router))
