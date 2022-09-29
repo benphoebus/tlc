@@ -4,8 +4,11 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"go-mongo-api/configs"
+	
 	"github.com/gorilla/mux"
+
+	"go-mongo-api/configs"
+	"go-mongo-api/routes"
 )
 
 func main() {
@@ -14,6 +17,9 @@ func main() {
 
 	// run database
 	configs.ConnectDB()
+
+	// routes 
+	routes.UserRoutes(router)
 	
 	// http.ListenAndServe function to run the application on port 6000
 	log.Fatal(http.ListenAndServe(":6000", router))
