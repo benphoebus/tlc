@@ -3,6 +3,7 @@ module go-mongo-api
 go 1.19
 
 require (
+	github.com/benphoebus/tlc v0.0.0-20220929003134-a2e0524e0853 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/go-playground/validator/v10 v10.11.1 // indirect
